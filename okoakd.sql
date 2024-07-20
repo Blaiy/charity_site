@@ -61,6 +61,8 @@ CREATE TABLE `volunteers` (
   `category` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+ALTER TABLE volunteers ADD COLUMN cv VARCHAR(255);
+
 --
 -- Dumping data for table `volunteers`
 --
