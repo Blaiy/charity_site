@@ -196,7 +196,7 @@
     } else if (typeof method === 'object' || !method ) {
       return methods.init.apply( this, arguments );
     } else {
-      $.error('Method ' + method + ' does not exist on jQuery.sticky');
+      $.error('Method ' + method + ' Does not exist on jQuery.sticky');
     }
   };
 
@@ -206,7 +206,7 @@
     } else if (typeof method === 'object' || !method ) {
       return methods.unstick.apply( this, arguments );
     } else {
-      $.error('Method ' + method + ' does not exist on jQuery.sticky');
+      $.error('Method ' + method + ' Does not exist on jQuery.sticky');
     }
   };
   $(function() {
