@@ -161,42 +161,42 @@ https://templatemo.com/tm-581-kind-heart-charity
                         
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                   <div class="form-check form-check-radio">
-                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault1" value="10">
+                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault1" value="1000">
                                     <label class="form-check-label" for="flexRadioDefault1">Ksh1000</label>
                                   </div>
                                 </div>
                         
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                   <div class="form-check form-check-radio">
-                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault2" value="15">
+                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault2" value="1500">
                                     <label class="form-check-label" for="flexRadioDefault2">Ksh1500</label>
                                   </div>
                                 </div>
                         
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                   <div class="form-check form-check-radio">
-                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault3" value="20">
+                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault3" value="2000">
                                     <label class="form-check-label" for="flexRadioDefault3">Ksh2000</label>
                                   </div>
                                 </div>
                         
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                   <div class="form-check form-check-radio">
-                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault4" value="30">
+                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault4" value="3000">
                                     <label class="form-check-label" for="flexRadioDefault4">Ksh3000</label>
                                   </div>
                                 </div>
                         
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                   <div class="form-check form-check-radio">
-                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault5" value="45">
+                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault5" value="4500">
                                     <label class="form-check-label" for="flexRadioDefault5">Ksh4500</label>
                                   </div>
                                 </div>
                         
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                   <div class="form-check form-check-radio">
-                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault6" value="50">
+                                    <input class="form-check-input" type="radio" name="donation_amount" id="flexRadioDefault6" value="5000">
                                     <label class="form-check-label" for="flexRadioDefault6">Ksh5000</label>
                                   </div>
                                 </div>
@@ -207,7 +207,18 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <input type="text" class="form-control" name="custom_amount" placeholder="Custom amount">
                                   </div>
                                 </div>
-                        
+                                <script>
+                                  document.querySelectorAll('input[name="donation_amount"]').forEach(function(element) {
+                                      element.addEventListener('change', function() {
+                                          var customAmountGroup = document.getElementById('customAmountGroup');
+                                          if (this.value === 'custom') {
+                                              customAmountGroup.style.display = 'block';
+                                          } else {
+                                              customAmountGroup.style.display = 'none';
+                                          }
+                                      });
+                                  });
+                                  </script>
                                 <div class="col-lg-12 col-12">
                                   <h5 class="mt-1">Personal Info</h5>
                                 </div>
@@ -234,7 +245,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                   </div>
                         
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="donation_payment_method" id="flexRadioDefault10" value="paypal">
+                                    <input class="form-check-input" type="radio" name="donation_payment_method" id="flexRadioDefault10" value="m-pesa">
                                     <label class="form-check-label" for="flexRadioDefault10">
                                       <i class="bi-phone custom-icon ms-1"></i>
                                       M-pesa

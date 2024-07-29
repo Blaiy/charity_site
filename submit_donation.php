@@ -18,9 +18,12 @@ if (isset($_POST['donation_name']) && isset($_POST['donation_email']) && isset($
     $name = $_POST['donation_name'];
     $email = $_POST['donation_email'];
     $frequency = $_POST['donation_frequency'];
-    $amount = $_POST['donation_amount'] ? $_POST['donation_amount'] : $_POST['custom_amount']; // Use custom amount if provided
+    $amount = isset($_POST['donation_amount']) && $_POST['donation_amount'] !== 'custom' ? $_POST['donation_amount'] : (isset($_POST['custom_amount']) ? $_POST['custom_amount'] : ''); // Use custom amount if provided
     $payment_method = $_POST['donation_payment_method'];
-
+ 
+    if (empty($amount) || (!isset($_POST['donation_amount']) && empty($_POST['custom_amount']))) {
+        die("Donation amount is required.");
+    }
     // Prepare and bind
     $stmt = $conn->prepare("INSERT INTO donors (name, email, amount, frequency, payment_method) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $name, $email, $amount, $frequency, $payment_method);
