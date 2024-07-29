@@ -16,14 +16,40 @@
         <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
         <style>
-        
+        .cont {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 4px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+        }
+        #fields {
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            padding: 10px;
+            min-height: 100px;
+            overflow: auto;
+            background-color: #ffffff;
+        }
         .btn-primary {
             background-color: #9fe2bf;
             border-color: #9fe2bf;
         }
         .btn-primary:hover {
-            background-color: #7d3232;
-            border-color: #7d3232;
+            background-color: #355e3b;
+            border-color: #355e3b;
         }
         #printableTable h2 {
             text-align: center;
@@ -102,7 +128,7 @@
                 <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
                     <ul class="social-icon">
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-twitter"></a>
+                            <a href="https://www.twitter.com/OkoaKD" class="social-icon-link bi-twitter"></a>
                         </li>
 
                         <li class="social-icon-item">
@@ -110,7 +136,7 @@
                         </li>
 
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-instagram"></a>
+                            <a href="https://www.instagram.com/okoa_kakah_dadah" class="social-icon-link bi-instagram"></a>
                         </li>
 
                         <li class="social-icon-item">
@@ -174,6 +200,9 @@
                     <li class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Donate</a>
                     </li>
+                    <li class="nav-item ">
+                            <a class="nav-link click-scroll" href="admin.php">Admin</a>
+                        </li>
                 </ul>
             </div>
         </div>
@@ -182,7 +211,7 @@
     
         </div>
     
-<div class="container">
+<div class="cont">
     <form method="GET" action="admin.php">
         <div class="form-group">
             <label for="table">Select Table:</label>
